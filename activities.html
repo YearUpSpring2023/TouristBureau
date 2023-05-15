@@ -9,7 +9,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="css/site.css" rel="stylesheet">
     <link href="css/activities.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <nav class="navbar navbar-expand-lg bg-body">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html"><img src="images/coconut-tree-illustration"
-                        alt="coconutlogo" width="48" height="42">
+                            alt="coconutlogo" width="48" height="42">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -42,34 +42,129 @@
     <main>
         <h1 class=" text-center">Activites</h1>
         <div class="container">
-            <div class="row">
-                <select id="categorySelect">
-                    <option value=""> Select one</option>
-                    <option value="Adventures">Adventures</option>
-                    <option value="Arts & Crafts">Arts & Crafts</option>
-                    <option value="Museums"> Museums</option>
-                    <option value="Wine Tastings">Wine Tastings</option>
-                    <option value="Other">Other</option>
-                </select>
+
+            <div id="categorySelectionRow" class="row">
+                <div class="col">
+                    <label for="categorySelect">Category:</label>
+                    <select id="categorySelect">
+                        <option value="">Select one</option>
+                        <option value="Adventures">Adventures</option>
+                        <option value="Arts & Crafts">Arts & Crafts</option>
+                        <option value="Museums"> Museums</option>
+                        <option value="Wine Tastings">Wine Tastings</option>
+                        <option value="Other">Other</option>
+                    </select>                    
+                </div>
+
             </div>
-            <div class="row">
-                <select id="availableItemsListbox" size="10"> Listed</select>
+
+            <div id="activitySelectionRow" class="row">
+
+                <div class="col">
+                    <label for="activitySelect">Activity:</label>
+                    <select id="activitySelect">
+
+                    </select>                    
+                </div>
+
             </div>
-        </div>
-        <!--section-->
+            
+            <!--Activity Card start-->
+
+            <div id="activityDetailRow" class="row">
+                <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Valley Hot Air Balloons</h5>
+                        <ul id="activityDetails" class="">
+                            <li>Id:<span id="activityId">A101</span></li>
+                            <li>Description:<span id="activityDesc">Enjoy a lovely hot air balloon ride over the valley at sunrise.  Call 800-555-1212 to reserve a date/time after you complete your e-ticket purchase.</span></li>
+                            <li>Location:<span id="activityLocation">121 S. Main Street</span></li>
+                            <li>Price:<span id="activityPrice">265.00 </span></li>
+                         
+                       
+                        </ul>
+                    </div>
+                </div>                    
+                </div>
+
+                <!--First Group works here-->
+            </div>
+
+            <!--CHECKOUT/PAYMENT DETAILS-->
+            <div id="paymentDetailRow" class="row">
+                <!-- Second group works here-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center mt-3">
+                            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                                <h2>Checkout</h2>
+
+                                <div class="input-group mt-4">
+                                    <span class="input-group-text">First and last name</span>
+                                    <input type="text" aria-label="First name" class="form-control">
+                                    <input type="text" aria-label="Last name" class="form-control">
+                                </div>
+                                
+                                <div class="mb-3 mt-4">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone
+                                        else.</div>
+                                </div>
+                                
+                                <div class="mb-3 mt-4">
+                                    <label for="creditcardnumber" class="form-control">Card Number</label>
+                                    <input type="text" class="form-text" id="creditcardnumber">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="expirationDate" class="form-label">Exp Date</label>
+                                    <input type="date" class="form-control" id="expirationDate">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-control" for="cvvNumber">CVV</label>
+                                    <input type="text" class="form-text" id="cvvNumber">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="billingAddress" for="billingAddress">Billing Addres</label>
+                                    <input type="text" class="form-text" id="billingAddress">
+                                </div>
+                                <select id="stateLists" name="states">
+                                    <option value="">Pick A State</option>
+                                </select>
+                                
+
+                                <div class="mb-3 form-check">
+                                    <label class="totalNumTickets" for="totalNumTickets">Tickets: </label>
+                                    <input type="text" class="form-check-input" id="totalNumTickets" readonly>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                                <button type="reset" class="btn btn-dark mt-4">Reset</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--section-->
 
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-        crossorigin="anonymous"></script>
-    <script src="scripts/index.js"></script>
+        crossorigin="anonymous"></script> -->
+    <script src="scripts/activitiesdata.js"></script>
+    <script src="scripts/activities.js"></script>
 </body>
 
 </html>
