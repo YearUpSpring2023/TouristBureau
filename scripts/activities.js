@@ -44,7 +44,6 @@ function onCategorySelectChange() {
 
 }
 
-
 function getActivitiesInCategory(fullListOfActivities, category) {
     let result = [];
 
@@ -73,26 +72,6 @@ function populateActivitySelect(fullListOfActivities, selectedCategory) {
     }
 
 }
-
-
-function populateActivitySelectOld(fullListOfActivities, selectedCategory) {
-
-    activitySelect.innerHTML = "";
-
-    let initialOption = new Option("Please select your activity!", "");
-    activitySelect.appendChild(initialOption);
-
-    for (let thisActivity of fullListOfActivities) {
-        if (thisActivity.category == selectedCategory) {
-
-            let theOption = new Option(thisActivity.name, thisActivity.id);
-            activitySelect.appendChild(theOption);
-            console.log("The new option has been added to the dropdown")
-        }
-    }
-
-}
-
 
 
 function onActivitySelectChange() {
