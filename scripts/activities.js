@@ -30,7 +30,7 @@ window.onload = function () {
 
     hideActivitySelect();
     hideActivityDetail();
-    hideCheckout();
+
 };  
 
 
@@ -53,7 +53,7 @@ function onCategorySelectChange(){
     }
 
     hideActivityDetail();
-    hideCheckout();      
+    
 
 
 }
@@ -93,6 +93,7 @@ function onActivitySelectChange(){
 
     if(selectedActivityId == ""){
         hideActivityDetail();
+
     }
     else{
         
@@ -124,7 +125,7 @@ function getActivityById(id){
     for( let i = 0 ; i < activities.length ; i++){
         let thisActivity = activities[i];
         if(thisActivity.id == id){
-            return thisActivity            
+            return thisActivity;            
         }
 
     }
@@ -133,6 +134,7 @@ function getActivityById(id){
 
 function hideActivityDetail() {
     activityDetailRow.style.display = 'none';
+    hideCheckout();
 }
 
 function showActivityDetail() {
