@@ -58,12 +58,20 @@ function onCategorySelectChange(){
 
 }
 
+//ASSIGNMENT TODO:
+// Re-write the below function so that it uses a new 
+// function named getActivitiesInCategory (defined and created below)
+// to get an array with only the activities that need to be listed.
+// then loop through those activities and list them.
+
 
 function populateActivitySelect(fullListOfActivities, selectedCategory){
     // This function should populate the second dropdown with only the 
     // activities that exist in the selected category.
 
-    activitySelect.options.length = 0;
+    //activitySelect.options.length = 0;
+
+    activitySelect.innerHTML = "";
 
     let initialOption = new Option("Please select your activity!", "");
     activitySelect.appendChild(initialOption);
@@ -80,6 +88,16 @@ function populateActivitySelect(fullListOfActivities, selectedCategory){
 
     }
 
+}
+
+function getActivitiesInCategory(fullListOfActivities, category){
+    let result = []
+
+    // todo to the work here to build out result with only the activities that are of the correct category:
+
+
+
+    return result;
 }
 
 
